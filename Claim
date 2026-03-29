@@ -1,0 +1,149 @@
+
+  "name": "Claim",
+  "type": "object",
+  "properties": {
+    "patient_name": {
+      "type": "string",
+      "title": "Patient Name"
+    },
+    "patient_id": {
+      "type": "string",
+      "title": "Patient ID"
+    },
+    "diagnosis_description": {
+      "type": "string",
+      "title": "Diagnosis Description"
+    },
+    "procedure_description": {
+      "type": "string",
+      "title": "Procedure Description"
+    },
+    "icd10_code": {
+      "type": "string",
+      "title": "ICD-10 Code"
+    },
+    "icd10_description": {
+      "type": "string",
+      "title": "ICD-10 Description"
+    },
+    "cpt_code": {
+      "type": "string",
+      "title": "CPT Code"
+    },
+    "cpt_description": {
+      "type": "string",
+      "title": "CPT Description"
+    },
+    "coding_confidence": {
+      "type": "number",
+      "title": "Coding Confidence %"
+    },
+    "needs_manual_review": {
+      "type": "boolean",
+      "title": "Needs Manual Review"
+    },
+    "coding_reasoning": {
+      "type": "string",
+      "title": "Coding Reasoning"
+    },
+    "insurance_id": {
+      "type": "string",
+      "title": "Insurance Policy ID"
+    },
+    "insurance_provider": {
+      "type": "string",
+      "title": "Insurance Provider"
+    },
+    "policy_type": {
+      "type": "string",
+      "title": "Policy Type"
+    },
+    "claim_amount": {
+      "type": "number",
+      "title": "Claim Amount"
+    },
+    "copay_amount": {
+      "type": "number",
+      "title": "Co-pay Amount"
+    },
+    "payable_amount": {
+      "type": "number",
+      "title": "Payable Amount"
+    },
+    "decision": {
+      "type": "string",
+      "title": "Decision",
+      "enum": [
+        "Pending",
+        "Approved",
+        "Rejected",
+        "Escalated",
+        "On Hold",
+        "Manual Override"
+      ]
+    },
+    "decision_reason": {
+      "type": "string",
+      "title": "Decision Reason"
+    },
+    "risk_score": {
+      "type": "number",
+      "title": "Risk Score"
+    },
+    "compliance_status": {
+      "type": "string",
+      "title": "Compliance Status",
+      "enum": [
+        "Passed",
+        "Failed",
+        "Warning",
+        "Pending"
+      ]
+    },
+    "compliance_flags": {
+      "type": "string",
+      "title": "Compliance Flags"
+    },
+    "hipaa_validated": {
+      "type": "boolean",
+      "title": "HIPAA Validated"
+    },
+    "duplicate_check": {
+      "type": "boolean",
+      "title": "Duplicate Check Passed"
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "title": "Human Review Required"
+    },
+    "override_justification": {
+      "type": "string",
+      "title": "Override Justification"
+    },
+    "overridden_by": {
+      "type": "string",
+      "title": "Overridden By"
+    },
+    "processing_time_ms": {
+      "type": "number",
+      "title": "Processing Time (ms)"
+    },
+    "stage": {
+      "type": "string",
+      "title": "Current Stage",
+      "enum": [
+        "Coding",
+        "Adjudication",
+        "Compliance",
+        "Decision",
+        "Complete"
+      ]
+    }
+  },
+  "required": [
+    "patient_name",
+    "patient_id",
+    "diagnosis_description",
+    "procedure_description"
+  ]
+}
