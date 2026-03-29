@@ -1,0 +1,53 @@
+{
+  "name": "AuditLog",
+  "type": "object",
+  "properties": {
+    "claim_id": {
+      "type": "string",
+      "title": "Claim ID"
+    },
+    "action": {
+      "type": "string",
+      "title": "Action"
+    },
+    "stage": {
+      "type": "string",
+      "title": "Stage"
+    },
+    "details": {
+      "type": "string",
+      "title": "Details"
+    },
+    "risk_level": {
+      "type": "string",
+      "title": "Risk Level",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Critical"
+      ]
+    },
+    "performed_by": {
+      "type": "string",
+      "title": "Performed By"
+    },
+    "duration_ms": {
+      "type": "number",
+      "title": "Duration (ms)"
+    },
+    "compliance_result": {
+      "type": "string",
+      "title": "Compliance Result"
+    },
+    "timestamp": {
+      "type": "string",
+      "title": "Timestamp"
+    }
+  },
+  "required": [
+    "claim_id",
+    "action",
+    "stage"
+  ]
+}
